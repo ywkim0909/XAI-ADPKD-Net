@@ -69,8 +69,8 @@ def batch_predict(images):
 
 def generate_xai_images():
 
-    img_name="394690"
-    path = 'test_img/class_2/' + img_name + '.tiff'
+    # put .tiff file path and name
+    path = 'path/filename.tifff'
 
     img = generate_superpixels(path, 200, 10)
 

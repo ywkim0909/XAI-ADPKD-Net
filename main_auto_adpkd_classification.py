@@ -10,7 +10,8 @@ import torchvision.transforms as transforms
 import torch.nn.functional as F
 
 def load_weights_and_classify():
-    img_folder = 'test_img/'
+    # put folder name containing .tiff files to test
+    img_folder = 'folder name'
     with open("model_weights/model_weights_adpkd_classification.pickle", "rb") as f_model:
         model_conv = pickle.load(f_model)
 
@@ -32,7 +33,7 @@ def load_weights_and_classify():
     print(device)
 
     # name of images
-    img_list = Path('test_img/class_2').glob("*.tiff")
+    img_list = Path(img_folder + 'class_2').glob("*.tiff")
     img_names = []
     for name in img_list:
         name_tmp_img = Path(name).stem
